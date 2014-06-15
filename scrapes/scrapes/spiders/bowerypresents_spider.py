@@ -1,7 +1,7 @@
 from scrapy.spider import Spider
 from scrapy.selector import Selector
 from scrapy.http import Request
-from scrapes.items import BoweryEventItem
+from scrapes.items.bowerypresents import BoweryPresentsEventItem
 
 class BoweryPresentsSpider(Spider):
     name = "bowerypresents"
@@ -20,7 +20,7 @@ class BoweryPresentsSpider(Spider):
 
     def parse_detail(self, response):
         sel = Selector(response)
-        item = BoweryEventItem()
+        item = BoweryPresentsEventItem()
         item['source'] = 'bowerypresents'
         item['source_url'] = response.url
         item['schema_version'] = '0.1.0'

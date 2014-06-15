@@ -1,6 +1,6 @@
 from scrapy.spider import Spider
 from scrapy.http import Request
-from scrapes.items import NycGovEventItem
+from scrapes.items.nycgov import NycGovEventItem
 import json
 
 class NycGovSpider(Spider):
