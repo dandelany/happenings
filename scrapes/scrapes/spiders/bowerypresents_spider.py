@@ -1,10 +1,10 @@
 from scrapy.spider import Spider
 from scrapy.selector import Selector
 from scrapy.http import Request
-from bowerypresents.items import BoweryEventItem
+from scrapes.items import BoweryEventItem
 
-class BoweryCalendarSpider(Spider):
-    name = "bowery"
+class BoweryPresentsSpider(Spider):
+    name = "bowerypresents"
     allowed_domains = ["bowerypresents.com"]
     start_urls = [
         "http://www.bowerypresents.com/see-all-shows/"

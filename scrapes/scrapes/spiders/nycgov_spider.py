@@ -1,14 +1,13 @@
 from scrapy.spider import Spider
-from scrapy.selector import Selector
 from scrapy.http import Request
-from nycgov.items import NycGovEventItem
+from scrapes.items import NycGovEventItem
 import json
 
-class BoweryCalendarSpider(Spider):
+class NycGovSpider(Spider):
     name = "nycgov"
     allowed_domains = ["nyc.gov"]
     start_urls = [
-        "http://www1.nyc.gov/calendar/api/json/search.htm??&sort=DATE&pageNumber=1" 
+        "http://www1.nyc.gov/calendar/api/json/search.htm??&sort=DATE&pageNumber=1"
     ]
 
     def parse(self, response):
